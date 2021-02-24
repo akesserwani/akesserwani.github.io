@@ -1,0 +1,274 @@
+
+Names for Game:
+Pocket Caesar (PC)
+
+Interactive Console:
+
+Mingle:
+     Find Spouse:
+        Select Bride
+		:Add family member, happiness+
+    Find Lover
+        Select Person 
+
+Temple:
+    pray:
+        Yes/No
+        Choose God
+            :Luck+, reputation increases
+
+    make offering to god of choice:
+        Choose god  
+        Choose offering
+		Luck+, reputation increases
+
+Enjoyment
+    Gladitorial Games:
+        Yes/No
+		happiness +
+    Chariot Races:
+        Yes/No
+		happiness +
+    Tavern:
+        Amount to spend on money 
+		happiness +
+		spend money
+    Theater:
+        Yes/No
+		happiness +
+
+Pets:
+    Choose Animal:
+        List of Animals
+		happiness +
+		new family member
+
+Bathhouse:
+    Go to the baths:
+        Yes/No
+		looks+
+		reputation+
+    Workout at Baths:
+        Yes/No
+		strength+
+		looks+
+
+Gamble  
+    Gladitorial Games:
+        Choose Gladiator
+        Amount to bet
+		chance of winning/losing money
+		happiness +/-
+    Chariot Races: 
+        Choose Gladiator
+        Amount to bet
+		chance of winning/losing money
+		happiness +/-
+
+Politics:
+    Run for office:
+        List of offices
+		happiness +
+		reputation +
+		new career
+
+Crime:
+    Rob from the market:   
+        Select Accomplices
+    murder someone:
+        Select Accomplices
+    hire assassin:
+        Select Assassin
+    pickpockit:
+        Yes/No
+    burglary:
+        Select Accomplices
+ 
+
+Inheritance:
+    choose persons to inherit assets/money:
+    choose percentage:
+        Yes/No
+
+
+
+
+Event Console (Info - Reputation, Happiness, Strength, Looks):
+
+Early life choices:
+10 years old - tutor, work as apprenticeship(8 years for crafts), work on farm
+17 - join army, become doctor, become gladiator, get merchant
+
+
+Occupation:
+     farmer - 4000-5000      
+     doctor - 12000-15000       go to alexandria(20,000)
+     craftsman(choose what to craft) - 6000+       
+     merchant(choose what to sell) - 8000+      
+     join the army(level depends on social class)
+
+     Become Gladiator
+
+
+Assets 
+    buy horse
+        Negotiate
+            Yes/No
+    vehicles(carriage/cart/boat)
+        Negotiate
+            Yes/No
+    Buy Home(villa, domus, insula(apartment), land)
+        Negotiate 
+            Yes/No
+            
+Sell and refurbish things
+
+
+Family
+    list family members/pets:
+        Ask for money
+            Amount
+                Yes/No
+        Give Money
+            Amount
+                Yes/No
+        Attack
+            Yes/No
+        Spend Time
+            Yes/No
+        Kill
+            Choose Method
+                Yes/No
+        Abandon(If child)
+            Yes/No
+        Adopt(If appropiate)
+            Yes/No
+        Take to Medicus(If child)
+            Yes/No
+        Select As Heir
+            Yes/No
+
+
+Variables:
+Money - in denarius
+Reputation Score
+Happiness Score
+Strength
+Looks
+
+Data:
+Family/Pets
+Occupation
+Assets
+
+
+ 
+
+
+timeframe = 100 BC and 410 AD
+
+
+
+List of wars between timeframe:
+Punic wars - 
+Macedonian wars
+Selecuid wars
+Gallic wars
+Servile wars
+
+
+
+Ranks in Roman Army:
+Pedes - 500-800  
+Aquilifer - 2000-3000       years: 3-5, high strength
+Optio - 5000-6000           years: 3-5, high strength
+Centurion - 8000-10000      years: 2-3, high strength
+Primus Pilus - 15000-20000  years: 5-10, high strength, skip if equite/patrician 
+Tribune - 50000-70000 - max for pleb  years, 6-8, high strength
+Legatus - 100000-150000 -  5-8, high strength
+
+Praetorian - 20000-30000 - after retiring as primus pilus 
+
+
+
+Roman Offices:
+Have to have been tribune - 
+Quaestor 2-3
+Aedile - 4-5 years 
+Magistrate - 2-3
+Consul - 3-4
+
+
+Senator - minimum is magistrate
+Emperor(if after 15 AD) - minimum is senator, praetorian, consul  
+
+
+
+
+Roman Classes:
+Patrician - depending on name
+Equite - depending on income 
+Plebian
+
+
+Ethnicities in Game:
+Roman 
+Greek
+
+
+
+
+Events by age:
+1 - 
+2 - throw a tantrum
+3 - 
+4 - fight with siblings
+5 - do you want pet
+6 - play with kids
+7 - watch the races with family
+8 - choose god to pray to
+9  - listen to tutor
+10 - 
+11 - go with father to work
+12 - learn how to sword fight
+13 - puke at gladiator fight
+14 - poor beggar - beat them  
+15 - get drunk at tavern with friends
+16 - get married 
+17 - join the military, choose career path
+
+
+@after 18, if not married and have work, happiness goes down
+
+
+Goals: 
+Become Emperor - way to become - senator/praetorian/consul
+Become Rich Business men - merchant, craftsman, senator
+Become famous gladiator
+
+
+
+
+
+Next implementation:
+create events in timeline 
+
+running for politician
+
+Create gladiator box
+
+
+What increases strength:
+Surviving in combat
+Praying/offering to gods
+Working out at baths
+
+
+
+
+
+
+
+
+
+

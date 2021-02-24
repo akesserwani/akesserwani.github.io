@@ -1,0 +1,5 @@
+
+business sim functionality
+
+Trade with other players - multiplayer function 
+
