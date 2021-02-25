@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Ali Kesserwani | Software Developer</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!--<link rel="icon" type="image/x-icon" href="assets/img/icon.png" /> -->
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -39,7 +39,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/avataaars.png" alt="" />
+                <img class="masthead-avatar mb-5" src="img/avataaars.png" alt="" />
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Ali Kesserwani</h1>
                 <!-- Icon Divider-->
@@ -68,32 +68,38 @@
                     <!-- Raspberry Pi Smartclock-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div onclick="window.location= 'https://github.com/akesserwani/python_smart_clock';" class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fab fa-github fa-3x">
                                 </i>
                                 <br><br>
                                 Raspberry Pi Smartclock
                             </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/raspberrypi_smartclock.png" alt="" />
+                            <img class="img-fluid" src="img/raspberrypi_smartclock.png" alt="" />
                         </div>
                     </div>
                     <!-- Finances Calculator-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fab fa-github fa-3x"></i></div>
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fab fa-github fa-3x"></i>
+                                    <br><br>
+                                    Coming Soon
+                                </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="" />
+                            <img class="img-fluid" src="img/game.png" alt="" />
                         </div>
                     </div>
-                    <!-- Blog-->
+
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-external-link-square-alt fa-3x"></i></div>
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fab fa-github fa-3x fa-3x"></i>
+                                    <br><br>
+                                    Coming Soon
+                                </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="" />
+                            <img class="img-fluid" src="img/cake.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -110,24 +116,28 @@
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-code"></i></div>
                     <div class="divider-custom-line"></div>
-                </div>
+                </div><br><br>
                 <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ml-auto">
-                    <p class="lead"><br>
-                        <h>Languages</h><br>
-
-                        <br>
-                        Python <i class="fab fa-python fa-3x"></i><br><br>
-                        Ruby <i class="far fa-gem"></i><br><br>
-                        Javascript <i class="fab fa-js"></i><br><br>
-                        HTML/CSS <i class="fab fa-html5"></i><br><br>
+                <center><div class="row">
+                    <div class="col-sm-6 ml-auto">
+                    <p class="lead">
+                        <h1 class = "">Languages</h1><br><br>
+                        <h3>Python &nbsp<i class="fab fa-python fa-lg"></i></h3><br>
+                        <h3>Ruby  &nbsp<i class="far fa-gem"></i></h3><br>
+                        <h3>Javascript  &nbsp<i class="fab fa-js"></i></h3><br>
+                        <h3>HTML/CSS  &nbsp<i class="fab fa-html5"></i></h3><br><br><br>
 
                     </p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">
-                        Tools
+
+                    <div class="col-sm-6 mr-auto">
+                        <p class="lead">
+                            <h1 class = "">Tools</h1><br><br>
+                            <h3>Visual Studio Code &nbsp<i class="fas fa-laptop-code"></i></h3><br>
+                            <h3>Git/Github  &nbsp<i class="fab fa-git-alt"></i></h3><br>
+                            <h3>Terminal  &nbsp<i class="fas fa-terminal"></i></h3><br>
+                            
                     </p></div>
-                </div>
+                </div></center>
             </div>
         </section>
 
@@ -142,10 +152,10 @@
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-code"></i></div>
                     <div class="divider-custom-line"></div>
-                </div><br><br><br>
+                </div><br><br>
 
-                <h2 class = "text-center text-secondary mb-0">Email: alikesserwani23@gmail.com</h2><br><br><br>
-                <h2 class = "text-center text-secondary mb-0">Mobile: 334-797-1120</h2><br><br><br>
+                <h2 class = "text-center text-secondary mb-0"> alikesserwani23@gmail.com <i class="fas fa-envelope fa-lg"></i></h2><br><br>
+                <h2 class = "text-center text-secondary mb-0">334-797-1120 <i class="fas fa-phone fa-lg"></i></h2><br><br><br>
 
 
             </div>
