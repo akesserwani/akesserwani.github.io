@@ -19,7 +19,34 @@
                     <li><a href="projects.html">Projects</a></li>
                   </ul>                  
             </div>
+
+            <div id="mobile-nav">
+                <ul>
+                    <li onclick="openNav()"><img src = "img/sidebar.svg" style = "fill:white; width: 60px; height:60px; position:relative; bottom:20px;"></li>
+                </ul>                  
+            </div>
+
+            <div id="side_nav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="bi bi-x-lg"></i></a><br>
+                <a href = "#" style = "color: #141a21;"><b>Home</b></a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+              </div>
+              
+            <script>
+                function openNav() {
+                  document.getElementById("side_nav").style.display = "block";
+                }
+                
+                function closeNav() {
+                  document.getElementById("side_nav").style.display = "none";
+                }
+            </script>
+                
+            
         </nav>
+
 
         <main>
             <!--Cover-->
@@ -88,9 +115,6 @@
                         </div>
                         <div class = "btn_round">
                            <a href = "https://github.com/akesserwani"><i class="bi bi-github icon"></i></a> 
-                        </div>
-                        <div class = "btn_round">
-                            <a href = "#"><i class="bi bi-facebook icon"></i></a> 
                         </div>
                     </div>
 
