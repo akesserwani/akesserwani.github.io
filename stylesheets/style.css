@@ -210,6 +210,8 @@ hr {
     line-height: 80px;
     color: white;
     font-size: 2vh;
+    border: none;
+
 }
 
 
@@ -225,6 +227,8 @@ hr {
     line-height: 80px;
     color: white;
     font-size: 2vh;
+    border: none;
+
     
 }
 
@@ -245,6 +249,7 @@ hr {
     display: inline-block;
     margin:20px;
     margin-top: 40px;
+    border: none;
 
 
 }
@@ -264,3 +269,10 @@ hr {
 
 }
 
+input,
+textarea {
+  border-radius: 41px;
+  border: 2px solid #B9B9B9;
+  background: white;
+  
+}

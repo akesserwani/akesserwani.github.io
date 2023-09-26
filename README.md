@@ -1,3 +1,3 @@
 # akesserwani.github.io
-* Domain: exploreali.com
+* Domain: explorerali.com
 * Personal Website for Ali Kesserwani
