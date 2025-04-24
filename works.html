@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Explorer Ali | Works</title>
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,500&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,600;1,500&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+        <!--Bootstrap Icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <!--Alpine JS CDN-->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>   
+        <!--Tailwind CDN-->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+
+    </head>
+
+<body class = "font-nunito">
+
+    <!--Navbar-->
+    <nav x-data="{ mobileMenuIsOpen: false }" @click.away="mobileMenuIsOpen = false">
+        <div class = "w-full h-[15vh] flex flex-row align-middle justify-between bg-sky-950 shadow">
+            <!--Navigation items-->
+            <div class = "w-1/2 md:w-1/3 xl:w-1/4 flex flex-row">
+                <!--Icons - hide for mobile and make hamburger menu size <md> -->
+                <div class = "hidden text-3xl text-white w-full md:flex flex-row align-middle items-center gap-10 lg:gap-12 xl:gap-14 ml-16">
+                    <a class = "active:scale-90" href="index.html" > 
+                        <span class="hover:text-gray-400 hover:cursor-pointer">
+                            Home
+                        </span>
+                    </a>
+
+                    <a> 
+                        <span class="font-bold 4xl">
+                            Works
+                        </span>
+                    </a>
+
+                    <a class = "active:scale-90" href="contact.html" > 
+                        <span class="hover:text-gray-400 hover:cursor-pointer">
+                            Contact
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!--Hamburger Icon - show when in mobile view size <md> -->
+                <div class = "text-5xl text-white w-full flex md:hidden flex-row justify-end items-center mr-12">
+                    <button @click="mobileMenuIsOpen = !mobileMenuIsOpen" class = "active:scale-90">
+                        <span class="hover:text-gray-400 hover:cursor-pointer"><i class="bi-list"></i></span>
+                    </button>
+                </div>
+                
+        </div>    
+
+        <!-- Mobile Menu -->
+        <ul x-cloak x-show="mobileMenuIsOpen" class="fixed max-h-svh overflow-y-auto inset-x-0 top-0 z-50 flex flex-col  text-2xl text-white divide-slate-300 rounded-b-xl bg-sky-950 px-6 pb-6 pt-20 md:hidden">
+            <li class="py-4"><a href = "index.html" class="w-full active:scale-95 active:text-gray-400">Home</a></li>
+            <li class="py-4"><a class="w-full font-bold text-3xl">Works</a></li>
+            <li class="py-4"><a href="contact.html" class="w-full active:scale-95 active:text-gray-400">Contact</a></li>
+        </ul> 
+    </nav>  
+
+    <main>
+        <!--Page Container-->
+    <div class="flex flex-col w-full min-h-screen justify-between bg-slate-200">
+        <!--Page Contents-->
+        <div class = "flex flex-col gap-8 p-16">
+            <div>
+                <!--Text with name-->
+                <h1 class = "text-3xl md:text-4xl text-sky-950 font-bold">Works</h1>
+                <!--Divider-->
+                <hr class = "border-2 border-sky-950 w-full mt-4">    
+            </div>
+        
+
+            <!--Content Div-->
+            <!--When md+ 2x2, when in mobile view, show list of 1x1-->
+            <div class = "flex flex-row flex-wrap gap-4"
+                x-data="{ projects: [
+                { id: 1, tags: ['Linguistics', 'Tech'], title: 'LinguaBerry', description: 'Linguaberry is a language-learning app designed to combine various aspects of language learning into a single platform, using AI to generate accurate data for the languages it supports. Linguaberry aims to fill a gap in language-learning resources by providing content for intermediate to advanced language learners, unlike many other apps that focus primarily on beginners. The app was written in VueJS 3', link: 'http://linguaberry.com' },
+                { id: 2, tags: ['Archaeology', 'Tech'], title: 'Digital Archaeological Atlas', description: 'The Digital Archaeological Atlas, also called Digital Archaeological Atlas of the Classical East, is an interactive database that tracks lost, known, and potential classical archaeological sites in the Middle East. Built with Ruby on Rails, the website features an interactive map and categorizes archaeological sites as potential, active and regulated, or abandoned. The app was written in Ruby on Rails', link: 'https://github.com/akesserwani/DAACE' },
+                { id: 3, tags: ['Tech'], title: 'AtlasXplorer', description: 'AtlasXplorer is a social media site in which users can create and share maps with geographic points. The social media site can be applied in the fields of archaeology, travel, tourism, and general geo-spatial sciences. The app was written in Django/Python', link: 'https://atlasxplorer.onrender.com/' },
+                { id: 4, tags: ['Archaeology', 'Linguistics'], title: 'Evolution of the Arabic Script', description: 'In this presentation, I examine the transition of the Nabataean Aramaic script to Early Arabic. I also examine similarities between the Arabic script and Syriac, theorizing a potential Syriac catalyzation of the Arabic script.', link: 'https://drive.google.com/file/d/1r269wBZ0b289B7tofEHXS3Nr4txR-g7g/view' },
+                { id: 5, tags: ['Archaeology', 'Linguistics'], title: 'Palmyrene Aramaic Inscriptions', description: 'Link coming soon', link: '#' },
+                { id: 6, tags: ['Tech'], title: 'Quickcards', description: 'Quickcards is an application that converts pdf, videos, and audio files to flashcards based off of a user inputed schema. The app was written in NodeJS on the backend with a React frontend. The backend uses the OpenAI API to generate the content of the flaschards. Link coming soon.', link: '#' }
+                ]}">
+                <template x-for="project in projects" :key="project.id">
+                    <!--Individual Project Entry-->
+                    <div class = "flex flex-col justify-between w-full md:w-2/5 aspect-square bg-white border border-gray-300 rounded-lg p-8">
+                        <!--Title for text-->
+                        <div class = "flex flex-col gap-4">
+                            <h1 class = "text-sky-950 font-bold text-2xl"  x-text="project.title"></h1>
+                            <!--Container with Tags-->
+                            <div class = "flex flex-row gap-2 flex-wrap">
+                                <!-- Individual tag -->
+                                <template x-for="tag in project.tags" :key="tag">
+                                    <div class="px-4 rounded-xl bg-blue-200 border border-blue-400 text-blue-500 text-sm" x-text="tag"></div>
+                                </template>
+                            </div>
+                            <!--Text Description-->
+                            <p class="break-words" x-text="project.description"></p>
+                        </div>
+                        <br>
+                        <!--Button to visit-->
+                        <a :href="project.link" target="_blank" class="p-2 w-full rounded-lg bg-blue-500 hover:bg-blue-600 active:scale-95 text-white text-base md:text-lg font-semibold text-center block">
+                            Visit Site
+                        </a>
+                    </div>
+                </template>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    </main>
+
+    <!--footer-->
+    <footer class = "relative bottom-0 left-0 w-full h-48 bg-sky-900"> 
+        <div class = "h-3/4 flex flex-row items-center justify-center align-middle">
+            <!--Social Media Buttons-->
+            <div class="flex flex-row gap-8"
+            x-data="{ socials: [
+                { icon: 'bi-envelope-fill', link: 'mailto: akesserwani3@gatech.com' },
+                { icon: 'bi-linkedin', link: 'https://www.linkedin.com/in/alikesserwani/' },
+                { icon: 'bi-github', link: 'https://github.com/akesserwani' },
+            ]}">
+                <template x-for="social in socials" :key="social.icon">
+                    <button class="px-4 py-4 aspect-square rounded-lg bg-blue-500 hover:bg-blue-600 active:scale-95 shadow-md text-white text-3xl font-semibold">
+                        <a :href="social.link" target="_blank" rel="noopener noreferrer">
+                            <i :class="`bi ${social.icon}`"></i>
+                        </a>
+                    </button>
+                </template>
+            </div>
+        </div>
+    
+        <div class = "relative bottom-0 left-0 w-full h-1/4 z-50 bg-sky-950 flex flex-col align-middle items-center justify-center">
+            <p class = "text-xs md:text-sm text-white">Copyrights © 2024 All Rights Reserved - Ali Kesserwani</p>
+        </div>
+    </footer>
+    
+</body>
+
+
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Explorer Ali</title>
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,500&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,600;1,500&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+        <!--Bootstrap Icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <!--Alpine JS CDN-->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>   
+        <!--Tailwind CDN-->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+
+    </head>
+
+<body class = "font-nunito">
+
+    <!--Navbar-->
+    <nav x-data="{ mobileMenuIsOpen: false }" @click.away="mobileMenuIsOpen = false">
+        <div class = "w-full h-[15vh] flex flex-row align-middle justify-between bg-sky-950 shadow">
+            <!--Navigation items-->
+            <div class = "w-1/2 md:w-1/3 xl:w-1/4 flex flex-row">
+                <!--Icons - hide for mobile and make hamburger menu size <md> -->
+                <div class = "hidden text-3xl text-white w-full md:flex flex-row align-middle items-center gap-10 lg:gap-12 xl:gap-14 ml-16">
+                    <a> 
+                        <span class="font-bold text-4xl">
+                            Home
+                        </span>
+                    </a>
+
+                    <a class = "active:scale-90" href="works.html" > 
+                        <span class="hover:text-gray-400 hover:cursor-pointer">
+                            Works
+                        </span>
+                    </a>
+
+                    <a class = "active:scale-90" href="contact.html" > 
+                        <span class="hover:text-gray-400 hover:cursor-pointer">
+                            Contact
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!--Hamburger Icon - show when in mobile view size <md> -->
+                <div class = "text-5xl text-white w-full flex md:hidden flex-row justify-end items-center mr-12">
+                    <button @click="mobileMenuIsOpen = !mobileMenuIsOpen" class = "active:scale-90">
+                        <span class="hover:text-gray-400 hover:cursor-pointer"><i class="bi-list"></i></span>
+                    </button>
+                </div>
+                
+        </div>    
+
+        <!-- Mobile Menu -->
+        <ul x-cloak x-show="mobileMenuIsOpen" class="fixed max-h-svh overflow-y-auto inset-x-0 top-0 z-50 flex flex-col  text-2xl text-white divide-slate-300 rounded-b-xl bg-sky-950 px-6 pb-6 pt-20 md:hidden">
+            <li class="py-4"><a class="w-full font-bold text-3xl ">Home</a></li>
+            <li class="py-4"><a href="works.html" class="w-full active:scale-95 active:text-gray-400">Works</a></li>
+            <li class="py-4"><a href="contact.html" class="w-full active:scale-95 active:text-gray-400">Contact</a></li>
+        </ul> 
+    </nav>
+
+    <main>
+    <!-- Page Container -->
+    <div class="min-h-screen flex flex-col">
+        <!--Top Page Container for landing page-->
+        <!--contains baalbeck image in background with parralax scroll-->
+        <div class="w-full h-[85vh] flex flex-col justify-center items-center relative bg-fixed bg-cover bg-center" style="background-image: url('static/baalbeck.jpg');">
+        
+            <!-- Overlay Content -->
+            <div class="flex flex-col gap-4 items-center justify-center p-4 text-center z-10 h-full bg-black bg-opacity-50">
+                <!-- Profile Image -->
+                <img src="static/cover_photo.jpg" class="w-1/2 md:w-1/4 rounded-full shadow-xl ">
+        
+                <!-- Text with name -->
+                <h1 class="text-4xl text-white font-bold">Ali Kesserwani, BA</h1>
+                
+                <!-- Divider -->
+                <hr class="border-2 border-white w-full md:w-3/4">
+                
+                <!-- Header Text -->
+                <h2 class="text-2xl text-white">Masters Student in CS at Georgia Tech</h2>
+                
+                <!-- Smaller header text -->
+                <h3 class="text-lg text-white">BA in Computer Science and Anthropology</h3>
+            </div>
+
+        </div>
+        
+
+        <!--Next Container for About page-->
+        <div class = "flex-grow flex justify-center flex-col md:flex-row bg-slate-200">
+            <!--Left Box with personal image and headlines-->
+            <div class="w-full md:w-1/2 flex flex-col gap-4 items-center justify-center bg-slate-200">
+                <!--containter with texts-->
+                <div class = "flex flex-col gap-4 md:gap-6 xl:gap-8 justify-center p-10 text-left">
+                    <!--Text with name-->
+                    <h1 class = "text-2xl md:text-4xl text-sky-950 font-bold">About Ali</h1>
+                    <!--Divider-->
+                    <hr class = "border-2 border-sky-950 w-1/2 md:w-full">
+                    <!--Header Text-->
+                    <h2 class = "text-sm md:text-base text-sky-950 tracking-wider" style = "line-height: 2.1rem;">
+                        <b>Ali Kesserwani</b> is an anthropologist, software engineer, entrepreneur, and graduate student currently pursuing a <b>Master's degree in Computer Science</b> at the <b>Georgia Institute of Technology</b>. He completed his undergraduate studies at the <b>University of Alabama at Birmingham (UAB)</b> in 2024, where he earned a double major in <b>Computer Science</b> and <b>Anthropology</b> with a minor in <b>Ancient and Medieval Studies</b>. During his time at UAB, Ali focused on integrating computational methods and software development with <b>archaeology</b> and <b>linguistics</b>. Recently, he has been contributing to the <b>Wisconsin Palmyrene Aramaic Project (WPAIP)</b> at the <b>University of Wisconsin - Madison</b>. In addition to this academic work, he has developed software for language learning - <b>linguaberry.com</b> - and databases designed to discover lost and potential archaeological sites via satellite imagery.
+                    </h2>
+                </div>
+
+                <!--Buttons-->
+                <div class = "flex flex-row gap-4 w-full pl-10">
+                    <a href = "static/cv_ali_kesserwani.pdf" target="_blank" class = "p-4 rounded-lg bg-sky-900 hover:bg-sky-950 active:scale-95 text-white text-base md:text-lg font-semibold">
+                        View Resume
+                    </a>
+
+                    <a href="https://www.uab.edu/news/people/item/14278-a-love-for-languages-uab-graduate-integrates-his-interest-in-ancient-manuscripts-and-cutting-edge-tech-to-promote-language-learning" target="_blank" class = "p-4 rounded-lg bg-blue-500 hover:bg-blue-600 active:scale-95 text-white text-base md:text-lg font-semibold">
+                        Read My Bio
+                    </a> 
+
+                </div>
+
+            </div>
+            <!--Right Box with image of Temple-->
+            <div class = "w-full md:w-1/2 h-[85vh] hidden md:flex flex-col items-center justify-center bg-slate-200">
+                <!--Load in image-->
+                <img src="static/grad_photo.jpg" class="w-5/6 rounded-2xl ">
+            </div>
+
+        </div>
+    </div>
+    <div class = "h-[5vh] bg-slate-200"></div>
+    </main>
+    
+    <!--footer-->
+    <footer class = "relative bottom-0 left-0 w-full h-48 bg-sky-900"> 
+        <div class = "h-3/4 flex flex-row items-center justify-center align-middle">
+            <!--Social Media Buttons-->
+            <div class="flex flex-row gap-8"
+            x-data="{ socials: [
+                { icon: 'bi-envelope-fill', link: 'mailto: akesserwani3@gatech.com' },
+                { icon: 'bi-linkedin', link: 'https://www.linkedin.com/in/alikesserwani/' },
+                { icon: 'bi-github', link: 'https://github.com/akesserwani' },
+            ]}">
+                <template x-for="social in socials" :key="social.icon">
+                    <button class="px-4 py-4 aspect-square rounded-lg bg-blue-500 hover:bg-blue-600 active:scale-95 shadow-md text-white text-3xl font-semibold">
+                        <a :href="social.link" target="_blank" rel="noopener noreferrer">
+                            <i :class="`bi ${social.icon}`"></i>
+                        </a>
+                    </button>
+                </template>
+            </div>
+        </div>
+    
+        <div class = "relative bottom-0 left-0 w-full h-1/4 z-50 bg-sky-950 flex flex-col align-middle items-center justify-center">
+            <p class = "text-xs md:text-sm text-white">Copyrights © 2024 All Rights Reserved - Ali Kesserwani</p>
+        </div>
+    </footer>
+    
+</body>
+
+
+
+</html>
