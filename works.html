@@ -5,13 +5,13 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Explorer Ali | Works</title>
+        <title>Ali Kesserwani | Works</title>
 
         <!--Fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,500&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,600;1,500&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
         <!--Bootstrap Icons-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <!--Alpine JS CDN-->
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>   
         <!--Tailwind CDN-->
@@ -20,7 +20,7 @@
 
     </head>
 
-<body class = "font-nunito">
+<body>
 
     <!--Navbar-->
     <nav x-data="{ mobileMenuIsOpen: false }" @click.away="mobileMenuIsOpen = false">
@@ -84,12 +84,11 @@
             <!--When md+ 2x2, when in mobile view, show list of 1x1-->
             <div class = "flex flex-row flex-wrap gap-4"
                 x-data="{ projects: [
-                { id: 1, tags: ['Linguistics', 'Tech'], title: 'LinguaBerry', description: 'Linguaberry is a language-learning app designed to combine various aspects of language learning into a single platform, using AI to generate accurate data for the languages it supports. Linguaberry aims to fill a gap in language-learning resources by providing content for intermediate to advanced language learners, unlike many other apps that focus primarily on beginners. The app was written in VueJS 3', link: 'http://linguaberry.com' },
-                { id: 2, tags: ['Archaeology', 'Tech'], title: 'Digital Archaeological Atlas', description: 'The Digital Archaeological Atlas, also called Digital Archaeological Atlas of the Classical East, is an interactive database that tracks lost, known, and potential classical archaeological sites in the Middle East. Built with Ruby on Rails, the website features an interactive map and categorizes archaeological sites as potential, active and regulated, or abandoned. The app was written in Ruby on Rails', link: 'https://github.com/akesserwani/DAACE' },
-                { id: 3, tags: ['Tech'], title: 'AtlasXplorer', description: 'AtlasXplorer is a social media site in which users can create and share maps with geographic points. The social media site can be applied in the fields of archaeology, travel, tourism, and general geo-spatial sciences. The app was written in Django/Python', link: 'https://atlasxplorer.onrender.com/' },
-                { id: 4, tags: ['Archaeology', 'Linguistics'], title: 'Evolution of the Arabic Script', description: 'In this presentation, I examine the transition of the Nabataean Aramaic script to Early Arabic. I also examine similarities between the Arabic script and Syriac, theorizing a potential Syriac catalyzation of the Arabic script.', link: 'https://drive.google.com/file/d/1r269wBZ0b289B7tofEHXS3Nr4txR-g7g/view' },
-                { id: 5, tags: ['Archaeology', 'Linguistics'], title: 'Palmyrene Aramaic Inscriptions', description: 'Link coming soon', link: '#' },
-                { id: 6, tags: ['Tech'], title: 'Quickcards', description: 'Quickcards is an application that converts pdf, videos, and audio files to flashcards based off of a user inputed schema. The app was written in NodeJS on the backend with a React frontend. The backend uses the OpenAI API to generate the content of the flaschards. Link coming soon.', link: '#' }
+                { id: 1, tags: ['Linguistics', 'Tech'], title: 'LinguaBerry LLC', description: 'Linguaberry is a language-learning app designed to combine various aspects of language learning into a single platform, using AI to generate accurate data for the languages it supports. Linguaberry aims to fill a gap in language-learning resources by providing content for intermediate to advanced language learners, unlike many other apps that focus primarily on beginners. The mobile app is available on the App Store and Google Play and is written in React Native. The web app was written in Django (Python).', link: 'http://linguaberry.com', button: 'View Website' },
+                { id: 5, tags: ['Archaeology', 'Linguistics'], title: 'Palmyrene Aramaic Inscriptions', description: 'Abstract: The Museo Barracco di scultura antica (Barracco Museum of Ancient Sculpture, Rome, Italy) houses three Palmyrene funerary busts (PAT 1064, 1065, 1759). In this study, we analyze all three reliefs, providing discussions of their iconographic features, onomastics and prosopography, and script-styles, with particularly detailed descriptions attending the latter. We confirm prior readings and make additional observations regarding the subjects’ professional and social identities.', link: 'https://www.journals.uchicago.edu/doi/abs/10.1086/731528', button: 'Read Article' },
+                { id: 4, tags: ['Archaeology', 'Linguistics'], title: 'Evolution of the Arabic Script', description: 'In this presentation, I examine the transition of the Nabataean Aramaic script to Early Arabic. I also examine similarities between the Arabic script and Syriac, theorizing a potential Syriac catalyzation of the Arabic script.', link: 'https://drive.google.com/file/d/1r269wBZ0b289B7tofEHXS3Nr4txR-g7g/view', button: 'Watch Video' },
+                { id: 3, tags: ['Tech'], title: 'AtlasXplorer', description: 'AtlasXplorer is a social media site in which users can create and share maps with geographic points. The social media site can be applied in the fields of archaeology, travel, tourism, and general geo-spatial sciences. The app was written in Django/Python', link: 'https://github.com/akesserwani/atlasxplorer', button: 'View Code' },
+                { id: 2, tags: ['Archaeology', 'Tech'], title: 'Digital Archaeological Atlas', description: 'The Digital Archaeological Atlas, also called Digital Archaeological Atlas of the Classical East, is an interactive database that tracks lost, known, and potential classical archaeological sites in the Middle East. Built with Ruby on Rails, the website features an interactive map and categorizes archaeological sites as potential, active and regulated, or abandoned. The app was written in Ruby on Rails', link: 'https://github.com/akesserwani/DAACE', button: 'View Code' },
                 ]}">
                 <template x-for="project in projects" :key="project.id">
                     <!--Individual Project Entry-->
@@ -101,7 +100,7 @@
                             <div class = "flex flex-row gap-2 flex-wrap">
                                 <!-- Individual tag -->
                                 <template x-for="tag in project.tags" :key="tag">
-                                    <div class="px-4 rounded-xl bg-blue-200 border border-blue-400 text-blue-500 text-sm" x-text="tag"></div>
+                                    <div class="px-4 rounded-xl bg-blue-200 text-blue-500 text-sm" x-text="tag"></div>
                                 </template>
                             </div>
                             <!--Text Description-->
@@ -109,9 +108,8 @@
                         </div>
                         <br>
                         <!--Button to visit-->
-                        <a :href="project.link" target="_blank" class="p-2 w-full rounded-lg bg-blue-500 hover:bg-blue-600 active:scale-95 text-white text-base md:text-lg font-semibold text-center block">
-                            Visit Site
-                        </a>
+                        <a :href="project.link" target="_blank" class="p-2 w-full rounded-lg bg-blue-500 hover:bg-blue-600 active:scale-95 text-white text-base md:text-lg font-semibold text-center block"
+                            x-text="project.button"></a>
                     </div>
                 </template>
             </div>
@@ -127,31 +125,39 @@
     </main>
 
     <!--footer-->
-    <footer class = "relative bottom-0 left-0 w-full h-48 bg-sky-900"> 
-        <div class = "h-3/4 flex flex-row items-center justify-center align-middle">
-            <!--Social Media Buttons-->
-            <div class="flex flex-row gap-8"
-            x-data="{ socials: [
-                { icon: 'bi-envelope-fill', link: 'mailto: akesserwani3@gatech.com' },
-                { icon: 'bi-linkedin', link: 'https://www.linkedin.com/in/alikesserwani/' },
-                { icon: 'bi-github', link: 'https://github.com/akesserwani' },
-            ]}">
-                <template x-for="social in socials" :key="social.icon">
-                    <button class="px-4 py-4 aspect-square rounded-lg bg-blue-500 hover:bg-blue-600 active:scale-95 shadow-md text-white text-3xl font-semibold">
-                        <a :href="social.link" target="_blank" rel="noopener noreferrer">
-                            <i :class="`bi ${social.icon}`"></i>
-                        </a>
-                    </button>
-                </template>
+        <footer class = "relative bottom-0 left-0 w-full h-48 bg-sky-900"> 
+            <div class = "h-3/4 flex flex-row items-center justify-center align-middle">
+                <!--Social Media Buttons-->
+                <div class="flex flex-row gap-8"
+                x-data="{ socials: [
+                    { link: '#', icon: 'bi-mortarboard-fill' },
+                    { link: 'https://linkedin.com/in/alikesserwani', icon: 'bi-linkedin' },
+                    { link: 'mailto: ali.kesserwani@emory.edu', icon: 'bi-envelope-fill' },
+                ]}">
+
+                    <template x-for="social in socials" :key="social.icon">
+                        <button class="px-4 py-4 aspect-square rounded-lg bg-blue-500 hover:bg-blue-600 active:scale-95 shadow-md text-white text-3xl font-semibold">
+                            <a :href="social.link" target="_blank" rel="noopener noreferrer">
+                                <i :class="`bi ${social.icon}`"></i>
+                            </a>
+                        </button>
+                    </template>
+                </div>
             </div>
-        </div>
-    
-        <div class = "relative bottom-0 left-0 w-full h-1/4 z-50 bg-sky-950 flex flex-col align-middle items-center justify-center">
-            <p class = "text-xs md:text-sm text-white">Copyrights © 2024 All Rights Reserved - Ali Kesserwani</p>
-        </div>
-    </footer>
+        
+            <div class = "relative bottom-0 left-0 w-full h-1/4 z-50 bg-sky-950 flex flex-col gap-2 align-middle items-center justify-center py-10">
+                <p class = "text-xs md:text-sm text-white">Copyrights © 2025 All Rights Reserved - Ali Kesserwani</p>
+                <p class = "text-xs md:text-sm text-white italic">Created with ReactJS</p>
+            </div>
+        </footer>
     
 </body>
+
+<style>
+    body {
+    font-family: "Nunito", sans-serif;
+    }
+</style>
 
 
 
